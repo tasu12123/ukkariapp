@@ -51,8 +51,8 @@ public class Main {
 	}
 
 	private static void addNewTask() {
-		System.out.println("\n--- タスク追加 (0入力でメニューに戻る) ---");
-		String title = InputUtil.readString("タスク名: ");
+		System.out.println("\n--- 予定追加 (0入力でメニューに戻る) ---");
+		String title = InputUtil.readString("予定名: ");
 		if (title.equals("0")) {
 			System.out.println("メニューに戻ります。");
 			return;
@@ -95,11 +95,11 @@ public class Main {
 	private static void changeStatus() {
 		System.out.println("\n--- 状態変更 (0入力でメニューに戻る) ---");
 		if (taskService.isEmpty()) {
-			System.out.println("タスクがありません。");
+			System.out.println("予定がありません。");
 			return;
 		}
 		taskService.showAllTasks();
-		int id = InputUtil.readInt("状態を変えるタスクのIDを入力: ");
+		int id = InputUtil.readInt("状態を変える予定のIDを入力: ");
 		if (id == 0) {
 			System.out.println("メニューに戻ります。");
 			return;
@@ -128,11 +128,11 @@ public class Main {
 	private static void deleteTask() {
 		System.out.println("\n--- 削除 (0入力でメニューに戻る) ---");
 		if (taskService.isEmpty()) {
-			System.out.println("タスクがありません。");
+			System.out.println("予定がありません。");
 			return;
 		}
 		taskService.showAllTasks();
-		int id = InputUtil.readInt("削除するタスクのIDを入力: ");
+		int id = InputUtil.readInt("削除する予定のIDを入力: ");
 		if (id == 0) {
 			System.out.println("メニューに戻ります。");
 			return;
