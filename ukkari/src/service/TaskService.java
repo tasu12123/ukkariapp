@@ -29,7 +29,7 @@ public class TaskService {
 			taskList.remove(targetIndex);
 			System.out.println("削除しました。");
 		} else {
-			System.out.println("指定されたIDのタスクが見つかりません。");
+			System.out.println("指定されたIDの予定が見つかりません。");
 		}
 	}
 
