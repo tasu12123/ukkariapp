@@ -38,7 +38,6 @@ public class Task {
 		this.status = status;
 	}
 
-	@Override
 	public String toString() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
 		String deadlineStr = "未定";

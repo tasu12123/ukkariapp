@@ -14,7 +14,7 @@ public class TaskService {
 
 	public void addTask(Task task) {
 		taskList.add(task);
-		System.out.println("タスクを追加しました: " + task.getTitle());
+		System.out.println("予定を追加しました: " + task.getTitle());
 	}
 
 	public void deleteTask(int id) {
@@ -35,10 +35,10 @@ public class TaskService {
 
 	public void showAllTasks() {
 		if (taskList.size() == 0) {
-			System.out.println("タスクがありません。");
+			System.out.println("予定がありません。");
 			return;
 		}
-		System.out.println("--- タスク一覧 ---");
+		System.out.println("--- 予定一覧 ---");
 		for (Task task : taskList) {
 			System.out.println(task.toString());
 		}
@@ -54,7 +54,7 @@ public class TaskService {
 			}
 		}
 		if (!found) {
-			System.out.println("該当するタスクが見つかりませんでした。");
+			System.out.println("該当する予定が見つかりませんでした。");
 		}
 	}
 
@@ -66,7 +66,7 @@ public class TaskService {
 				return;
 			}
 		}
-		System.out.println("指定されたIDのタスクが見つかりません。");
+		System.out.println("指定されたIDの予定が見つかりません。");
 	}
 
 	public boolean isEmpty() {
