@@ -27,7 +27,7 @@ public class InputUtil {
 	public static LocalDateTime readDateTime(String message) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
 		while (true) {
-			System.out.print(message + " (例: 2026/10/01 15:30) ※未設定はEnter、戻る場合は0: ");
+			System.out.print(message + " (例: YYYY/MM/DD MM:MM) ※未設定はEnter、戻る場合は0: ");
 			String input = scanner.nextLine();
 			if (input.equals("")) {
 				return null;
