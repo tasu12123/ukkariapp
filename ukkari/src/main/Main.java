@@ -10,9 +10,8 @@ public class Main {
 	private static TaskService taskService = new TaskService();
 
 	public static void main(String[] args) {
-		System.out.println("=========================================");
+		System.out.println("                        ");
 		System.out.println("        うっかり忘れ防止アプリ");
-		System.out.println("=========================================");
 
 		while (true) {
 			System.out.println();
