@@ -17,7 +17,7 @@ public class Main {
 			System.out.println();
 			System.out.println("1. 予定追加");
 			System.out.println("2. 一覧表示");
-			System.out.println("3. 状態変更");
+			System.out.println("3. 優先順位変更");
 			System.out.println("4. 予定検索");
 			System.out.println("5. 予定削除");
 			System.out.println("0. 終了");
