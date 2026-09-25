@@ -10,7 +10,7 @@ public class Main {
 	private static TaskService taskService = new TaskService();
 
 	public static void main(String[] args) {
-		System.out.println("                                ");
+		System.out.println("                                "); //アプリタイトルを見やすくするための空白
 		System.out.println("        予定管理システム");
 
 		while (true) {
