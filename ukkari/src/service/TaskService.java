@@ -69,6 +69,17 @@ public class TaskService {
 		System.out.println("指定されたIDの予定が見つかりません。");
 	}
 
+	public void updateTaskPriority(int id, String newPriority) {
+		for (Task task : taskList) {
+			if (task.getId() == id) {
+				task.setPriority(newPriority);
+				System.out.println("優先度を「" + newPriority + "」に変更しました。");
+				return;
+			}
+		}
+		System.out.println("指定されたIDの予定が見つかりません。");
+	}
+
 	public boolean isEmpty() {
 		return taskList.isEmpty();
 	}

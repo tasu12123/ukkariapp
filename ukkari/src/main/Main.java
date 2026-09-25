@@ -10,16 +10,17 @@ public class Main {
 	private static TaskService taskService = new TaskService();
 
 	public static void main(String[] args) {
-		System.out.println("                        ");
-		System.out.println("        うっかり忘れ防止アプリ");
+		System.out.println("                                ");
+		System.out.println("        予定管理システム");
 
 		while (true) {
 			System.out.println();
 			System.out.println("1. 予定追加");
 			System.out.println("2. 一覧表示");
-			System.out.println("3. 優先順位変更");
+			System.out.println("3. 状態変更");
 			System.out.println("4. 予定検索");
 			System.out.println("5. 予定削除");
+			System.out.println("6. 優先度変更");
 			System.out.println("0. 終了");
 
 			int choice = InputUtil.readInt("メニューを選択してください: ");
@@ -39,6 +40,9 @@ public class Main {
 				break;
 			case 5:
 				deleteTask();
+				break;
+			case 6:
+				changePriority();
 				break;
 			case 0:
 				System.out.println("アプリを終了します。");
@@ -139,5 +143,27 @@ public class Main {
 		}
 
 		taskService.deleteTask(id);
+	}
+
+	private static void changePriority() {
+		System.out.println("\n--- 優先度変更 (0入力でメニューに戻る) ---");
+		if (taskService.isEmpty()) {
+			System.out.println("予定がありません。");
+			return;
+		}
+		taskService.showAllTasks();
+		int id = InputUtil.readInt("優先度を変える予定のIDを入力: ");
+		if (id == 0) {
+			System.out.println("メニューに戻ります。");
+			return;
+		}
+
+		String priority = InputUtil.readString("新しい優先度 (高 / 中 / 低): ");
+		if (priority.equals("0")) {
+			System.out.println("メニューに戻ります。");
+			return;
+		}
+
+		taskService.updateTaskPriority(id, priority);
 	}
 }

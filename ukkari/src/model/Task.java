@@ -38,6 +38,11 @@ public class Task {
 		this.status = status;
 	}
 
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+
+	@Override
 	public String toString() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
 		String deadlineStr = "未定";
